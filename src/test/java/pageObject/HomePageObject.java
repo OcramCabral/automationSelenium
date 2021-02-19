@@ -1,3 +1,5 @@
+package pageObject;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -30,7 +32,5 @@ public class HomePageObject {
         browser.quit();
     }
 
-    public String getTodoConteudo() {
-        return browser.getPageSource();
-    }
+    public String getEndereco(){ return browser.findElement(By.xpath("//*[@id=\"footer\"]/div/div[1]/div[2]/div/ul/li[1]")).getText(); }
 }
